@@ -9,13 +9,10 @@ def student():
 def result():
    if request.method == 'POST':
       result = dict()
-      result['Name'] = request.form.get('Name')
-      result['Student Number'] = request.form.get('Student Number')
-
-   
-      # 학번
-      # 성별
-      # 학과
+      result['Name'] = request.form.get('Name') # 이름
+      result['Student Number'] = request.form.get('Student Number') # 학번
+      result['Gender'] = request.form.get('Gender') # 성별
+      
       # 프로그래밍 언어 -> hint) ','.join(list명)을 사용하면 list 안에 있는 항목들이 ','로 나누어져 출력됨.
 
       return render_template("result.html",result = result)
