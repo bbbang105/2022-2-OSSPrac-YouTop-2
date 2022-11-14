@@ -1,0 +1,9 @@
+version: "3.0" # 버전 3.0으로 설정
+
+services: # 아래로는 서비스 정의       
+  youtop: # 서비스명을 youtop으로 설정
+    image: youtop:3.0 # 이미지명을 youtop, 태그를 3.0으로 설정
+    build: . # Dockerfile이 같은 경로에 위치함
+    ports: 
+    - "80:5000" # 포트 번호 80번과 5000번을 이어줌
+
