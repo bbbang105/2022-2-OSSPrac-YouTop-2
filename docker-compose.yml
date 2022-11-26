@@ -2,7 +2,7 @@ version: "3.0" # 버전 3.0으로 설정
 
 services: # 아래로는 서비스 정의       
   youtop: # 서비스명을 youtop으로 설정
-    image: youtop:3.0 # 이미지명을 youtop, 태그를 3.0으로 설정
+    image: ${DOCKER_USER_ID}/team_hw_5
     build: . # Dockerfile이 같은 경로에 위치함
     ports: 
     - "80:80" # 호스트 os 80번과 포트 번호 80번을 이어줌
